@@ -1,0 +1,396 @@
+:root {
+  --brand-accent: #0056B3;
+  --brand-bg-light: #F4F6F8;
+  --text-default: #333333;
+  --heading-weight: 600;
+  --body-weight: 400;
+  --radius: .4rem;
+  --section-gap: 1.2rem;
+  --badge-gap: .4rem;
+  --max-width: 8in;
+}
+
+@media print {
+  .download-btn {
+    display: none;
+  }
+}
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 90%;
+  color: var(--text-default);
+  background: #fff;
+  line-height: 1.45
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 .75rem
+}
+
+/* Header */
+.site-header {
+  background: var(--brand-bg-light);
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.header-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 0;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: .75rem
+}
+
+.header-info {
+  flex: 1;
+  min-width: 180px
+}
+
+.header-info h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: var(--heading-weight)
+}
+
+.role,
+.location {
+  margin: .2rem 0;
+  color: #555;
+  font-style: italic;
+  font-size: .85rem
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: .65rem;
+  margin: .25rem 0 0
+}
+
+.link-underline {
+  color: var(--brand-accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color .2s
+}
+
+.link-underline:hover {
+  border-color: var(--brand-accent)
+}
+
+.btn-primary {
+  background: var(--brand-accent) !important;
+  border-color: var(--brand-accent) !important;
+  border-radius: var(--radius);
+  padding: .55rem 1.1rem;
+  font-size: .85rem;
+  font-weight: var(--heading-weight)
+}
+
+.btn-primary:hover {
+  filter: brightness(0.9);
+}
+
+/* Main & Sections */
+main {
+  padding: var(--section-gap) 0;
+}
+
+/* Section container: gradient + glass + animation + hover lift */
+@keyframes sectionFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+.resume-section {
+  /* glassmorphic gradient */
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(4px);
+  border-left: 3px solid var(--brand-accent);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+
+  /* gradient subtle overlay */
+  background-image: linear-gradient(135deg,
+      rgba(244, 246, 248, 0.9) 0%,
+      rgba(233, 236, 239, 0.9) 100%);
+
+  /* entry animation */
+  animation: sectionFadeIn 0.6s ease forwards;
+  transform: translateY(20px);
+  opacity: 0;
+
+  /* hover lift */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  page-break-inside: avoid
+}
+
+.resume-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: var(--heading-weight);
+  color: var(--brand-accent);
+  margin-bottom: .75rem;
+  letter-spacing: .4px;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .05)
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--brand-accent);
+  transition: width 0.4s ease;
+}
+
+.resume-section:hover .section-title::after {
+  width: 40px
+}
+
+/* —— Subsection Titles —— */
+.subsection-title {
+  font-size: .8rem;
+  font-weight: var(--heading-weight);
+  color: var(--text-default);
+  line-height: 1.3;
+  word-break: keep-all;
+  margin-bottom: .55rem;
+  line-height: 1.25
+}
+
+/* —— Glassmorphic Cards —— */
+.card-custom {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius);
+  padding: .8rem
+}
+
+.card-accent-left {
+  border-left: 3px solid var(--brand-accent)
+}
+
+/* —— Gradient Pill Badges —— */
+.badge-custom {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  background: linear-gradient(135deg, #0056B312, #0056B328);
+  color: var(--brand-accent);
+  border: none;
+  border-radius: 999px;
+  padding: .3rem .65rem;
+  margin: .2rem .4rem .2rem 0;
+  font-size: .7rem;
+  transition: background .25s, color .25s;
+  white-space: normal;
+  text-align: center
+}
+
+.badge-custom:hover {
+  background: var(--brand-accent);
+  color: #fff
+}
+
+.dates {
+  font-size: 0.875rem;
+  color: #666;
+  margin-left: 0.5rem;
+}
+
+.job-card li {
+  list-style: none;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.job-card li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--brand-accent);
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid #dde2e6;
+  background: var(--brand-bg-light);
+  color: #666;
+  font-size: 0.875rem;
+}
+
+/* make the education line smaller & lighter */
+.header-info .education {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.5rem;
+  line-height: 1.2;
+}
+
+.job-card {
+  background: #fff;
+  border-radius: .25rem;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .05);
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+  transition: transform .2s, box-shadow .2s;
+  page-break-inside: avoid
+}
+
+.job-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .08)
+}
+
+.job-card .job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: .6rem
+}
+
+.job-card .company {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-default)
+}
+
+.job-card .dates {
+  font-size: .75rem;
+  color: #666
+}
+
+.job-card .role-title {
+  font-size: .9rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: .75rem
+}
+
+.job-card ul {
+  margin: 0;
+  padding: 0
+}
+
+.job-card li {
+  list-style: none;
+  margin-bottom: .55rem;
+  padding-left: 1.25rem;
+  position: relative;
+  line-height: 1.45;
+  font-size: .78rem
+}
+
+.job-card li::before {
+  content: '➤';
+  position: absolute;
+  left: 0;
+  color: var(--brand-accent);
+  font-size: .75rem
+}
+
+/* ───────── Footer ───────── */
+.site-footer {
+  text-align: center;
+  padding: .8rem 0;
+  border-top: 1px solid #dde2e6;
+  background: var(--brand-bg-light);
+  color: #666;
+  font-size: .75rem
+}
+
+/* ───────── Minor Tweaks ───────── */
+.header-info .education {
+  font-size: .7rem;
+  color: #666;
+  margin-top: .35rem
+}
+
+/* ───────── Print: keep visuals, kill motion, 1-page fit ───────── */
+@media print {
+
+  html,
+  body {
+    font-size: 80%
+  }
+
+  body {
+    -webkit-print-color-adjust: exact;
+    margin: 0
+  }
+
+  .resume-section {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    box-shadow: none !important
+  }
+
+  .resume-section:hover .section-title::after {
+    width: 40px
+  }
+
+  .job-card:hover {
+    transform: none !important;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, .05)
+  }
+
+  .badge-custom:hover {
+    background: linear-gradient(135deg, #0056B312, #0056B328);
+    color: var(--brand-accent)
+  }
+
+  .site-footer {
+    position: relative;
+    top: 0;
+    page-break-after: avoid
+  }
+
+  @page {
+    margin: .4in
+  }
+}

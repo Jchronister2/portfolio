@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- Favicon -->
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/71728717?v=4" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jonathan Chronister | Resume</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body id="resume-body" class="d-grid gap-3">
+  <header class="site-header">
+    <div class="container header-content">
+      <img src="https://avatars.githubusercontent.com/u/71728717?v=4" alt="Jonathan Chronister" class="avatar">
+      <div class="header-info">
+        <h1>Jonathan Chronister</h1>
+        <p class="role">Product Team Lead &amp; Co-Founder, Kartorium</p>
+        <p class="location">Anchorage, AK</p>
+        <p class="education"><strong>Bachelor’s Computer Science</strong>, University of Alaska Anchorage, 2020</p>
+        <ul class="contact-list">
+          <li><a href="mailto:JonnyChronister@gmail.com" class="link-underline">Email</a></li>
+          <li><a href="https://linkedin.com/in/jonathan-chronister/" target="_blank" class="link-underline">LinkedIn</a>
+          </li>
+          <li><a href="https://github.com/JonKarta/" target="_blank" class="link-underline">Kartorium GitHub</a></li>
+          <li><a href="https://github.com/Jchronister2/" target="_blank" class="link-underline">Personal GitHub</a></li>
+        </ul>
+      </div>
+      <a href="Jonathan_Chronister_Resume_2025.pdf" class="download-btn btn btn-primary" download>Download
+        Resume</a>
+      <button hidden id="download-pdf" class="download-btn btn btn-primary">Download Resume</button>
+    </div>
+  </header>
+
+  <main class="container d-grid gap-4">
+    <!-- Professional Summary -->
+    <section class="resume-section">
+      <h2 class="section-title">Professional Summary</h2>
+      <!-- B2B Asset-Visualization Product Leader Summary -->
+      <p hidden>Co-founded and led product vision and operations for a B2B asset-visualization SaaS, building
+        high-performance teams, aligning solutions to market needs, and driving consistent operational excellence.
+      </p>
+
+      <!-- Senior Full-Stack Angular & PostgreSQL Engineer Summary -->
+      <p>Senior Software Engineer & Full-Stack Developer with 5+ years building Angular applications and
+        PostgreSQL-backed web services. Proven track record delivering Agile, client-facing solutions—eliminating
+        bottlenecks, building durable systems, and improving developer workflows across teams.
+      </p>
+    </section>
+
+    <section hidden class="resume-section">
+      <h2 class="section-title">Core Strengths</h2>
+      <div class="grid-two">
+        <ul>
+          <li><strong>Technical Execution:</strong> Drove data-driven optimizations and architected sharded RDS
+            clusters,
+            CI/CD pipelines, and SOC II–ready AWS infrastructure.</li>
+          <li><strong>Domain Expertise:</strong> Deep geospatial & enterprise visualization solutions.</li>
+          <li><strong>Team Leadership:</strong> Scaled and mentored 20+ team members; instituted peer-review & agile
+            rituals, boosting throughput.</li>
+          <li><strong>Founder Grit:</strong> Adapted processes under pressure; stabilized releases during major pivots.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="resume-section">
+      <h2 class="section-title">Technical Skills</h2>
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 g-4">
+        <!-- 1. Languages & Runtimes -->
+        <div>
+          <div class="card-custom">
+            <h3 class="subsection-title">Languages &amp; Runtimes</h3>
+            <div class="d-flex flex-wrap">
+              <span class="badge-custom">TypeScript</span>
+              <span class="badge-custom">Python</span>
+              <span class="badge-custom">Node.js</span>
+              <span class="badge-custom">C++</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Frameworks & Libraries -->
+        <div>
+          <div class="card-custom">
+            <h3 class="subsection-title">Frameworks &amp; Libraries</h3>
+            <div class="d-flex flex-wrap">
+              <span class="badge-custom">.NET</span>
+              <span class="badge-custom">Angular</span>
+              <span class="badge-custom">Express</span>
+              <span class="badge-custom">Three.js</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Infrastructure & Data -->
+        <div>
+          <div class="card-custom">
+            <h3 class="subsection-title">Infrastructure &amp; Data</h3>
+            <div class="d-flex flex-wrap">
+              <span class="badge-custom">PostgreSQL</span>
+              <span class="badge-custom">Docker</span>
+              <span class="badge-custom">AWS</span>
+              <span class="badge-custom">CI/CD (CodeBuild)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Developer Tools & AI -->
+        <div>
+          <div class="card-custom">
+            <h3 class="subsection-title">Developer Tools &amp; AI</h3>
+            <div class="d-flex flex-wrap">
+              <span class="badge-custom">Git &amp; GitHub</span>
+              <span class="badge-custom">Postman</span>
+              <span class="badge-custom">OpenAI Playground</span>
+              <span class="badge-custom">Anthropic Workbench</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section class="resume-section">
+      <h2 class="section-title">Professional Experience</h2>
+      <div class="d-grid gap-3">
+        <article class="job-card">
+          <h3 class="job-header">
+            <span class="company">Kartorium</span>
+            <span class="dates">Sept 2020 – Present</span>
+          </h3>
+          <ul>
+            <li><strong>Performance &amp; Scalability:</strong> Improved page load times by 95% through indexing,
+              payload
+              tuning, and cleanup.</li>
+            <li><strong>Quality &amp; Velocity:</strong> Reduced major issues per release from 1.5 to 0.3 while
+              increasing
+              sprint frequency.</li>
+            <li><strong>Domain Features:</strong> Designed Raster Tiles Set Layers and Virtual Tours—integral to client
+              contracts.</li>
+            <li><strong>Team Building:</strong> Mentored 20+ team members; launched peer-review framework—boosting PR
+              merges by 40%.</li>
+            <li><strong>Infrastructure &amp; Compliance:</strong> Architected and executed a SOC II–compliant AWS
+              migration—including sharded RDS clusters and private-subnet EC2—in one month.</li>
+            <li><strong>Cost Optimization:</strong> Reversed an 8.4% Q4 AWS spend increase into a 15.3% reduction by
+              April
+              2025 through resource-use reviews and optimizations.</li>
+          </ul>
+        </article>
+
+        <article class="job-card">
+          <h3 class="job-header">
+            <span class="company">Avalanche</span>
+            <span class="dates">Jan 2017 – Jan 2019</span>
+          </h3>
+          <ul hidden>
+            <li>Built a custom escape room system from scratch (Python, C++, microcontrollers), directly boosting
+              bookings
+              and revenue capacity.</li>
+            <li>Led staff training and community events, encouraging creative problem-solving and iteration.</li>
+          </ul>
+
+          <!-- As Consulting -->
+          <ul>
+            <li>Consulted with venue leadership to design and deliver a custom escape room control system (Python, C++,
+              microcontrollers), increasing capacity and driving revenue growth.</li>
+            <li>Gathered functional requirements, iterated on interactive features, and delivered under tight
+              operational constraints.</li>
+            <li>Led training and community engagement efforts to improve user experience and maintain system
+              reliability.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section hidden class="resume-section">
+      <h2 class="section-title">Education</h2>
+      <p><strong>Bachelor’s Computer Science</strong>, University of Alaska Anchorage, 2020</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2025 Jonathan Chronister</p>
+  </footer>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- 1) html2pdf bundle (must come before your own code) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+  <!-- 2) Your custom “download” handler -->
+  <script>
+    document.getElementById('download-pdf').addEventListener('click', () => {
+      // pick the element you want to convert—here we’ll do the <main> only
+      const resumeEl = document.getElementById('resume-body');
+
+      // html2pdf options
+      const opt = {
+        margin: [0, 0, 0, 0],
+        filename: 'Jonathan_Chronister_Resume.pdf',
+        image: { type: 'jpeg', quality: 1 },
+        html2canvas: { scale: 1 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+      };
+
+      // kick off generation & download
+      html2pdf().set({
+        html2canvas: { scale: 2, useCORS: true },
+      }).from(resumeEl).save();
+    });
+  </script>
+</body>
+
+</html>
