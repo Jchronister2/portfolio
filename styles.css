@@ -16,6 +16,29 @@
   }
 }
 
+/* ===== Mobile (<576 px) ===== */
+@media (max-width: 575.98px) {
+
+  /* make it a big tappable bar */
+  .download-btn {
+    display: block;
+    /* its own row */
+    width: calc(100% - 2rem);
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 1rem 1rem 0;
+    /* space above, no extra below */
+    padding: 0.9rem 1.5rem;
+  }
+
+  /* optionally keep it visually anchored at bottom of header */
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 /* Reset & Base */
 *,
 *::before,
